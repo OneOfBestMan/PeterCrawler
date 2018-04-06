@@ -1,0 +1,5 @@
+﻿
+Build nuget:
+
+Nuget pack -build -properties "Configuration=Release;Platform=AnyCPU" ScrapySharp.nuspec
+

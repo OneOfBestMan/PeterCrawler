@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1BAE371B-63E1-4DF1-9DF1-1E0818A7899F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ScrapySharpAsync</RootNamespace>
+    <AssemblyName>ScrapySharpAsync</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FSharp.Core, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\FSharp.Core.4.0.0.1\lib\net40\FSharp.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.4, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9.4\lib\Net45\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\ScrapySharp\Cache\WebResourceEntity.cs">
+      <Link>Cache\WebResourceEntity.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Exceptions\ScrapingException.cs">
+      <Link>Exceptions\ScrapingException.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Extensions\DictionaryExtensions.cs">
+      <Link>Extensions\DictionaryExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Extensions\HDocumentCssQueryExtensions.cs">
+      <Link>Extensions\HDocumentCssQueryExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Extensions\CssQueryExtensions.cs">
+      <Link>Extensions\CssQueryExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Extensions\HElementNavigationProvider.cs">
+      <Link>Extensions\HElementNavigationProvider.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Extensions\HtmlCreationHelper.cs">
+      <Link>Extensions\HtmlCreationHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Extensions\HtmlParsingHelper.cs">
+      <Link>Extensions\HtmlParsingHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Extensions\HtmlValue.cs">
+      <Link>Extensions\HtmlValue.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Extensions\NodeValueComparer.cs">
+      <Link>Extensions\NodeValueComparer.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Extensions\NodeValueComparison.cs">
+      <Link>Extensions\NodeValueComparison.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Extensions\TokenHelper.cs">
+      <Link>Extensions\TokenHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Extensions\UrlHelper.cs">
+      <Link>Extensions\UrlHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\Dom\DeclarationType.cs">
+      <Link>Html\Dom\DeclarationType.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\Dom\HAttribute.cs">
+      <Link>Html\Dom\HAttribute.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\Dom\HComment.cs">
+      <Link>Html\Dom\HComment.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\Dom\HContainer.cs">
+      <Link>Html\Dom\HContainer.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\Dom\HDocument.cs">
+      <Link>Html\Dom\HDocument.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\Dom\HElement.cs">
+      <Link>Html\Dom\HElement.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\Dom\HtmlLinqExtensions.cs">
+      <Link>Html\Dom\HtmlLinqExtensions.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\Dom\IHSubContainer.cs">
+      <Link>Html\Dom\IHSubContainer.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\Forms\AgilityNodeParser.cs">
+      <Link>Html\AgilityNodeParser.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\Forms\FormField.cs">
+      <Link>Html\Forms\FormField.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\Forms\HElementFormParser.cs">
+      <Link>Html\Parsing\HElementFormParser.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\Forms\HElementNodeParser.cs">
+      <Link>Html\Parsing\HElementNodeParser.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\Forms\HyperLink.cs">
+      <Link>Html\Forms\HyperLink.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\Forms\IHtmlNodeParser.cs">
+      <Link>Html\Forms\IHtmlNodeParser.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\Forms\PageWebForm.cs">
+      <Link>Html\Forms\PageWebForm.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\Forms\WebForm.cs">
+      <Link>Html\Forms\WebForm.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\Parsing\CodeReader.cs">
+      <Link>Html\Parsing\CodeReader.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\Parsing\CodeReadingContext.cs">
+      <Link>Html\Parsing\CodeReadingContext.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\Parsing\HtmlDeclarationReader.cs">
+      <Link>Html\Parsing\HtmlDeclarationReader.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\Dom\TagDeclaration.cs">
+      <Link>Html\Parsing\TagDeclaration.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\Parsing\HtmlDomBuilder.cs">
+      <Link>Html\Parsing\HtmlDomBuilder.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\Parsing\Tokens.cs">
+      <Link>Html\Parsing\Tokens.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\Parsing\Word.cs">
+      <Link>Html\Parsing\Word.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\By.cs">
+      <Link>Html\By.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Network\CookiesParser.cs">
+      <Link>Network\CookiesParser.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\ElementFinder.cs">
+      <Link>Html\ElementFinder.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Html\ElementSearchKind.cs">
+      <Link>Html\ElementSearchKind.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Network\FakeUserAgent.cs">
+      <Link>Network\FakeUserAgent.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Network\FakeUserAgents.cs">
+      <Link>Network\FakeUserAgents.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Network\HttpVerb.cs">
+      <Link>Network\HttpVerb.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Network\RawRequest.cs">
+      <Link>Network\RawRequest.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Network\RawResponse.cs">
+      <Link>Network\RawResponse.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Network\WebPage.cs">
+      <Link>Network\WebPage.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Network\WebResource.cs">
+      <Link>Network\WebResource.cs</Link>
+    </Compile>
+    <Compile Include="..\ScrapySharp\Cache\WebResourceStorage.cs">
+      <Link>Cache\WebResourceStorage.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Network\ScrapingBrowser.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ScrapySharp.Core\ScrapySharp.Core.fsproj">
+      <Project>{ce27016b-2755-4b44-8a0e-574914b9256f}</Project>
+      <Name>ScrapySharp.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

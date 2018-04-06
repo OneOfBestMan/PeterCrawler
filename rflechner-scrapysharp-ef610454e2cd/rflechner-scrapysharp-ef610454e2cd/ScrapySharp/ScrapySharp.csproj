@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{19858AEA-E842-4633-AF1B-110ED4FE3770}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ScrapySharp</RootNamespace>
+    <AssemblyName>ScrapySharp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FSharp.Core, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\FSharp.Core.4.0.0.1\lib\net40\FSharp.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.4.9.4, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9.4\lib\Net40\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Caching" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cache\WebResourceEntity.cs" />
+    <Compile Include="Exceptions\ScrapingException.cs" />
+    <Compile Include="Extensions\DictionaryExtensions.cs" />
+    <Compile Include="Extensions\HDocumentCssQueryExtensions.cs" />
+    <Compile Include="Extensions\CssQueryExtensions.cs" />
+    <Compile Include="Extensions\HElementNavigationProvider.cs" />
+    <Compile Include="Extensions\HtmlCreationHelper.cs" />
+    <Compile Include="Extensions\HtmlParsingHelper.cs" />
+    <Compile Include="Extensions\HtmlValue.cs" />
+    <Compile Include="Extensions\NodeValueComparer.cs" />
+    <Compile Include="Extensions\NodeValueComparison.cs" />
+    <Compile Include="Extensions\TokenHelper.cs" />
+    <Compile Include="Extensions\UrlHelper.cs" />
+    <Compile Include="Html\Dom\DeclarationType.cs" />
+    <Compile Include="Html\Dom\HAttribute.cs" />
+    <Compile Include="Html\Dom\HComment.cs" />
+    <Compile Include="Html\Dom\HContainer.cs" />
+    <Compile Include="Html\Dom\HDocument.cs" />
+    <Compile Include="Html\Dom\HElement.cs" />
+    <Compile Include="Html\Dom\HtmlLinqExtensions.cs" />
+    <Compile Include="Html\Dom\IHSubContainer.cs" />
+    <Compile Include="Html\Forms\AgilityNodeParser.cs" />
+    <Compile Include="Html\Forms\FormField.cs" />
+    <Compile Include="Html\Forms\HElementFormParser.cs" />
+    <Compile Include="Html\Forms\HElementNodeParser.cs" />
+    <Compile Include="Html\Forms\HyperLink.cs" />
+    <Compile Include="Html\Forms\IHtmlNodeParser.cs" />
+    <Compile Include="Html\Forms\PageWebForm.cs" />
+    <Compile Include="Html\Forms\WebForm.cs" />
+    <Compile Include="Html\Parsing\CodeReader.cs" />
+    <Compile Include="Html\Parsing\CodeReadingContext.cs" />
+    <Compile Include="Html\Parsing\HtmlDeclarationReader.cs" />
+    <Compile Include="Html\Dom\TagDeclaration.cs" />
+    <Compile Include="Html\Parsing\HtmlDomBuilder.cs" />
+    <Compile Include="Html\Parsing\Tokens.cs" />
+    <Compile Include="Html\Parsing\Word.cs" />
+    <Compile Include="Html\By.cs" />
+    <Compile Include="Network\CookiesParser.cs" />
+    <Compile Include="Html\ElementFinder.cs" />
+    <Compile Include="Html\ElementSearchKind.cs" />
+    <Compile Include="Network\FakeUserAgent.cs" />
+    <Compile Include="Network\FakeUserAgents.cs" />
+    <Compile Include="Network\HttpVerb.cs" />
+    <Compile Include="Network\RawRequest.cs" />
+    <Compile Include="Network\RawResponse.cs" />
+    <Compile Include="Network\ScrapingBrowser.cs" />
+    <Compile Include="Network\WebPage.cs" />
+    <Compile Include="Network\WebResource.cs" />
+    <Compile Include="Cache\WebResourceStorage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Notes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ScrapySharp.Core\ScrapySharp.Core.fsproj">
+      <Project>{ce27016b-2755-4b44-8a0e-574914b9256f}</Project>
+      <Name>ScrapySharp.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
